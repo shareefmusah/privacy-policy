@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Gist</title>
+  <meta name="description" content="Privacy Policy for Gist, the university campus social platform by Shareef Technologies.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --bg-subtle: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #0F172A;
+      --text-muted: #475569;
+      --text-subtle: #94A3B8;
+      --border: #E2E8F0;
+      --primary: #0069E0;
+      --primary-hover: #0056B8;
+      --primary-subtle: rgba(0, 105, 224, 0.08);
+      --code-bg: #F1F5F9;
+      --radius: 8px;
+      --max-width: 1040px;
+      --measure: 68ch;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F19;
+        --bg-subtle: #111827;
+        --surface: #131B2E;
+        --text: #F8FAFC;
+        --text-muted: #94A3B8;
+        --text-subtle: #64748B;
+        --border: #1E293B;
+        --primary: #38BDF8;
+        --primary-hover: #0284C7;
+        --primary-subtle: rgba(56, 189, 248, 0.12);
+        --code-bg: #1E293B;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── Top Header ─── */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-dot {
+      color: var(--primary);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--primary-subtle);
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── Layout ─── */
+    .page-wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 3.5rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* ─── Sidebar Navigation ─── */
+    .sidebar {
+      position: sticky;
+      top: 5.5rem;
+      align-self: start;
+      max-height: calc(100vh - 6rem);
+      overflow-y: auto;
+    }
+
+    .nav-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-subtle);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .nav-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      padding: 0.35rem 0.5rem;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+      display: block;
+      line-height: 1.4;
+    }
+
+    .nav-list a:hover {
+      color: var(--primary);
+      background: var(--primary-subtle);
+    }
+
+    /* ─── Content ─── */
+    .content {
+      max-width: var(--measure);
+    }
+
+    .intro-block {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .lead {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+    }
+
+    ul, ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.875em;
+      background: var(--code-bg);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      color: var(--text);
+    }
+
+    .callout {
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      background: var(--bg-subtle);
+      border-left: 3px solid var(--primary);
+      margin: 1.5rem 0;
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table th {
+      font-weight: 600;
+      color: var(--text);
+      background: var(--bg-subtle);
+    }
+
+    .data-table td {
+      color: var(--text-muted);
+    }
+
+    /* ─── Footer ─── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+      padding: 2rem 1.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .site-footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 860px) {
+      .page-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 2rem;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+    }
+
+    /* ─── Print ─── */
+    @media print {
+      .site-header, .sidebar, .site-footer {
+        display: none;
+      }
+      .page-wrapper {
+        padding: 0;
+      }
+      body {
+        background: #fff;
+        color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand">
+        Gist<span class="brand-dot">.</span>
+      </a>
+      <span class="badge">Privacy Policy</span>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      <div class="nav-title">Contents</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#overview">1. Overview</a></li>
+          <li><a href="#information-we-collect">2. Information We Collect</a></li>
+          <li><a href="#permissions">3. Android Permissions</a></li>
+          <li><a href="#how-we-use-data">4. How We Use Data</a></li>
+          <li><a href="#third-parties">5. Third-Party Services</a></li>
+          <li><a href="#data-retention">6. Retention & Deletion</a></li>
+          <li><a href="#security">7. Data Security</a></li>
+          <li><a href="#children">8. Children's Privacy</a></li>
+          <li><a href="#rights">9. Your Privacy Rights</a></li>
+          <li><a href="#contact">10. Contact Information</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="intro-block">
+        <h1 class="title">Privacy Policy</h1>
+        <div class="meta">Effective Date: November 13, 2026 &nbsp;·&nbsp; Version 1.0.2</div>
+        <p class="lead">
+          This Privacy Policy explains how <strong>Gist</strong> ("we", "us", or "our"), operated by <strong>Shareef Technologies</strong>, collects, uses, shares, and protects your personal information when you use the Gist mobile application and related services.
+        </p>
+      </div>
+
+      <section id="overview">
+        <h2>1. Overview</h2>
+        <p>
+          Gist is a campus-centric social networking application designed for university and tertiary students to share updates, discover campus events, watch and post video reels, and connect through real-time messaging.
+        </p>
+        <p>
+          We are committed to transparent privacy practices and protecting your personal data in accordance with applicable data protection regulations and the Google Play Developer Distribution Agreement.
+        </p>
+      </section>
+
+      <section id="information-we-collect">
+        <h2>2. Information We Collect</h2>
+        <p>We collect only the information necessary to provide and secure Gist:</p>
+
+        <h3>A. Account and Profile Information</h3>
+        <ul>
+          <li><strong>Identity Details:</strong> Full name, chosen display name, and unique username handle.</li>
+          <li><strong>University Affiliation:</strong> University name, campus identifier, and student email or academic verification credentials used to assign your official campus badge.</li>
+          <li><strong>Profile Media:</strong> Profile picture (avatar), optional bio text, and graduation year or hall of residence.</li>
+        </ul>
+
+        <h3>B. Content You Generate and Share</h3>
+        <ul>
+          <li><strong>Campus Gists & Posts:</strong> Text posts, photos, and polls you publish to your campus or global feed.</li>
+          <li><strong>Reels (Short Videos):</strong> Videos and audio you record, create, caption, or upload.</li>
+          <li><strong>Engagement:</strong> Likes, comments, bookmarks, and shared reels.</li>
+          <li><strong>Direct Messaging:</strong> Messages, media previews, and reactions sent to other students. Direct messages are private to conversation participants.</li>
+        </ul>
+
+        <h3>C. Technical & Diagnostic Information</h3>
+        <ul>
+          <li><strong>Device Tokens:</strong> Unique push notification tokens (managed through the Expo Notification service) used solely to deliver notifications when you receive a message, comment, or mention.</li>
+          <li><strong>Log & Security Data:</strong> IP address, device model, operating system version, app version, and login timestamp records used strictly to detect brute-force attacks, prevent unauthorized account access, and enforce rate limits.</li>
+        </ul>
+      </section>
+
+      <section id="permissions">
+        <h2>3. Android Device Permissions</h2>
+        <p>Gist requests the following Android permissions to enable specific core features:</p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Purpose in Gist</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>RECORD_AUDIO</code></td>
+              <td>Allows you to record audio while capturing video reels or voice features. Audio is only captured when you explicitly initiate recording.</td>
+            </tr>
+            <tr>
+              <td><code>CAMERA</code></td>
+              <td>Enables you to take new photos or record videos directly within the app for posts, reels, or profile photos.</td>
+            </tr>
+            <tr>
+              <td><code>READ_MEDIA_IMAGES / VIDEO</code></td>
+              <td>Enables you to choose existing pictures or videos from your gallery to attach to your posts, messages, or reels.</td>
+            </tr>
+            <tr>
+              <td><code>FOREGROUND_SERVICE</code></td>
+              <td>Enables uninterrupted background video processing and reels media playback.</td>
+            </tr>
+            <tr>
+              <td><code>POST_NOTIFICATIONS</code></td>
+              <td>Delivers notifications for incoming chat messages, replies, and important campus alerts. You can disable this anytime in your device settings.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="how-we-use-data">
+        <h2>4. How We Use Your Data</h2>
+        <p>We process your data for the following legitimate purposes:</p>
+        <ul>
+          <li><strong>Feed Customization:</strong> Displaying posts and campus reels specifically relevant to your verified university.</li>
+          <li><strong>Real-Time Messaging:</strong> Delivering chats, typing indicators, and message delivery status between connected students.</li>
+          <li><strong>Safety & Abuse Prevention:</strong> Detecting spam, abusive behavior, impersonation, and unauthorized login attempts.</li>
+          <li><strong>App Performance:</strong> Diagnosing performance bottlenecks, crashes, and improving app responsiveness.</li>
+        </ul>
+        <div class="callout">
+          <p><strong>We never sell your personal information:</strong> Gist does not sell, rent, or trade your personal data, contact information, or private messages to third-party data brokers or advertisers.</p>
+        </div>
+      </section>
+
+      <section id="third-parties">
+        <h2>5. Third-Party Service Providers</h2>
+        <p>We work with trusted cloud infrastructure providers to run Gist securely:</p>
+        <ul>
+          <li><strong>Google Cloud & Firebase:</strong> Provides user authentication, secure database storage (Cloud Firestore), and backend logic. Subject to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+          <li><strong>Cloudflare (R2 Storage & Stream):</strong> Used for secure hosting and fast delivery of user-uploaded images and video reels. Subject to the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</li>
+          <li><strong>Expo (650 Industries):</strong> Manages push notification relay services. Subject to the <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo Privacy Policy</a>.</li>
+        </ul>
+      </section>
+
+      <section id="data-retention">
+        <h2>6. Data Retention and Account Deletion</h2>
+        <p>
+          We retain your information only as long as your account remains active or as required to comply with our legal obligations.
+        </p>
+
+        <h3>How to Delete Your Account:</h3>
+        <p>
+          You have full control over your account. You can permanently delete your Gist account and all associated personal data directly within the app:
+        </p>
+        <ol>
+          <li>Open Gist and go to your <strong>Profile</strong> tab.</li>
+          <li>Tap the <strong>Settings</strong> icon (top right).</li>
+          <li>Select <strong>Account</strong> &rarr; <strong>Delete Account</strong>.</li>
+          <li>Confirm your choice.</li>
+        </ol>
+        <p>
+          Upon confirmation, your profile, posts, reels, comments, and private messages are immediately unlinked and permanently purged from active Firestore databases.
+        </p>
+        <p>
+          Alternatively, you can request full account and data deletion by sending an email from your registered address to <a href="mailto:support@gistapp.com">support@gistapp.com</a> with the subject <em>"Delete My Account"</em>. Requests are fulfilled within 7 business days.
+        </p>
+      </section>
+
+      <section id="security">
+        <h2>7. Data Security</h2>
+        <p>
+          We implement rigorous technical safeguards including encrypted HTTPS/TLS in transit, granular Firestore security rules ensuring students can only access permitted collections, role-based database permissions, and IP-level brute force protection.
+        </p>
+      </section>
+
+      <section id="children">
+        <h2>8. Children's Privacy</h2>
+        <p>
+          Gist is specifically tailored for university, college, and tertiary institution students. Our services are not directed to individuals under the age of 13 (or under 18 where required by local law). We do not knowingly collect personal data from children. If we become aware that personal information of a minor under 13 has been collected without parental consent, we will promptly remove that data and terminate the account.
+        </p>
+      </section>
+
+      <section id="rights">
+        <h2>9. Your Privacy Rights</h2>
+        <p>Depending on your jurisdiction, you have the right to:</p>
+        <ul>
+          <li>Access the personal information we hold about you.</li>
+          <li>Correct inaccurate or outdated information through your in-app profile editor.</li>
+          <li>Request permanent erasure of your personal data.</li>
+          <li>Export a copy of your uploaded content.</li>
+          <li>Withdraw consent for optional features at any time.</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>10. Contact Information</h2>
+        <p>
+          If you have any questions, concerns, or requests regarding this Privacy Policy or Gist's data practices, please contact us at:
+        </p>
+        <div class="callout">
+          <p><strong>Gist — Shareef Technologies</strong></p>
+          <p>Developer &amp; Privacy Support: <a href="mailto:support@gistapp.com">support@gistapp.com</a></p>
+          <p>Alternative Contact: <a href="mailto:shareefmusah@gmail.com">shareefmusah@gmail.com</a></p>
+          <p>Location: Accra, Ghana</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Shareef Technologies. All rights reserved. &nbsp;·&nbsp; Gist Campus Social</p>
+  </footer>
+
+</body>
+</html>
