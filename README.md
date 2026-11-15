@@ -11,3 +11,4 @@ When GitHub Pages is enabled on the `main` branch, this page is published live a
 2. Click **Settings** (top tabs) &rarr; **Pages** (left sidebar).
 3. Under **Branch**, select `main` and root (`/`), then click **Save**.
 4. In about 1 minute, the live site will be active and ready to paste into Google Play Console!
+

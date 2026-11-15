@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Safety Standards & CSAE Prevention — Gist</title>
+  <meta name="description" content="Standards against Child Sexual Abuse and Exploitation (CSAE) and child safety compliance policies for Gist.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --bg-subtle: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #0F172A;
+      --text-muted: #475569;
+      --text-subtle: #94A3B8;
+      --border: #E2E8F0;
+      --primary: #0069E0;
+      --primary-hover: #0056B8;
+      --primary-subtle: rgba(0, 105, 224, 0.08);
+      --code-bg: #F1F5F9;
+      --radius: 8px;
+      --max-width: 900px;
+      --measure: 68ch;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F19;
+        --bg-subtle: #111827;
+        --surface: #131B2E;
+        --text: #F8FAFC;
+        --text-muted: #94A3B8;
+        --text-subtle: #64748B;
+        --border: #1E293B;
+        --primary: #38BDF8;
+        --primary-hover: #0284C7;
+        --primary-subtle: rgba(56, 189, 248, 0.12);
+        --code-bg: #1E293B;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .brand-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: var(--primary-subtle);
+      color: var(--primary);
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    main {
+      flex: 1;
+      max-width: var(--max-width);
+      width: 100%;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .hero {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: var(--text-subtle);
+    }
+
+    .notice-box {
+      background: var(--primary-subtle);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .notice-box strong {
+      color: var(--primary);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+      color: var(--text);
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      max-width: var(--measure);
+    }
+
+    ul, ol {
+      color: var(--text-muted);
+      margin-left: 1.25rem;
+      margin-bottom: 1rem;
+      max-width: var(--measure);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .contact-item {
+      padding: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .contact-item .label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-item .value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-subtle);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <span>Gist</span>
+        <span class="brand-badge">Child Safety</span>
+      </a>
+      <a href="index.html" class="nav-link">← Privacy Policy</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero-eyebrow">Google Play Policy Compliance</div>
+      <h1>Child Safety Standards & CSAE Prevention</h1>
+      <div class="hero-meta">
+        Published by Shareef Technologies · Effective Date: November 15, 2026 · Target: Gist Campus Platform
+      </div>
+    </div>
+
+    <div class="notice-box">
+      <strong>Zero Tolerance Policy:</strong> Gist strictly and categorically prohibits any form of Child Sexual Abuse and Exploitation (CSAE), Child Sexual Abuse Material (CSAM), grooming, sexual solicitation, or child sexual endangerment. Any violation results in immediate, permanent account termination and automatic escalation to legal and regulatory authorities.
+    </div>
+
+    <section>
+      <h2>1. Standards & Prohibited Conduct</h2>
+      <p>
+        Gist is a campus network designed exclusively for tertiary university students. Our safety guidelines maintain an unequivocal zero-tolerance stance towards child exploitation. The following acts are strictly banned and considered serious criminal matters:
+      </p>
+      <ul>
+        <li>Creation, uploading, transmission, sharing, viewing, or storing of Child Sexual Abuse Material (CSAM).</li>
+        <li>Sexual exploitation, trafficking, or grooming of minors.</li>
+        <li>Solicitation, predation, harassment, or inappropriate messaging directed toward individuals under the age of 18.</li>
+        <li>Depicting or encouraging sexual violence or harm against children.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. In-App Reporting & Detection Mechanisms</h2>
+      <p>
+        Gist provides multiple transparent in-app mechanisms that empower students and moderators to instantly report suspicious, harmful, or abusive activity:
+      </p>
+      <ul>
+        <li><strong>In-App Content Reporting:</strong> Every post, reel, comment, and chat message features a dedicated <em>Report</em> button. Users can select "Child Safety / Inappropriate Content" to trigger priority administrative review.</li>
+        <li><strong>User Profile Reporting & Blocking:</strong> Students can report and block any profile suspected of violating child safety or platform community standards.</li>
+        <li><strong>Automated & Priority Escalation:</strong> Content reported under child safety triggers an immediate freeze of the post or media item and routes the incident to our emergency safety queue.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Cooperation with Authorities & NCMEC</h2>
+      <p>
+        Gist complies fully with all applicable international, regional, and national child protection laws:
+      </p>
+      <ul>
+        <li><strong>Mandatory Reporting:</strong> Whenever suspected Child Sexual Abuse Material (CSAM) or exploitation is detected, Gist immediately preserves digital evidence and submits a formal report to the <strong>National Center for Missing & Exploited Children (NCMEC)</strong> and relevant regional law enforcement.</li>
+        <li><strong>Law Enforcement Assistance:</strong> We cooperate actively with the <strong>Cyber Security Authority (CSA) Ghana</strong>, the Ghana Police Service, and international child protection taskforces in investigations concerning child exploitation.</li>
+        <li><strong>Legal Preservation:</strong> Records related to child safety incidents are securely stored and quarantined in compliance with legal hold guidelines to support ongoing criminal prosecutions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Enforcement & Remediation Actions</h2>
+      <p>
+        Upon receipt or detection of a child safety violation:
+      </p>
+      <ol>
+        <li>The offending user account is permanently terminated and hardware-banned immediately.</li>
+        <li>All offending content is eradicated across our storage backends and content distribution networks.</li>
+        <li>Digital forensics and forensic logs are quarantined for legal disclosure.</li>
+        <li>Formal criminal referral is completed with authorities.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>5. Designated Point of Contact</h2>
+      <p>
+        In accordance with Google Play's Child Safety Standards policy, Gist maintains an authorized, designated point of contact readily available to address inquiries, reports, and regulatory compliance regarding CSAM prevention:
+      </p>
+
+      <div class="card">
+        <h3>Child Safety & Compliance Officer</h3>
+        <p style="margin-bottom: 0.75rem;">Direct all urgent child safety reports, regulatory requests, and law enforcement correspondence to:</p>
+        
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="label">Designated Contact</div>
+            <div class="value">Shareef Musah</div>
+          </div>
+          <div class="contact-item">
+            <div class="label">Official Compliance Email</div>
+            <div class="value">mrshareefmusah@gmail.com</div>
+          </div>
+          <div class="contact-item">
+            <div class="label">Support Inbox</div>
+            <div class="value">thegistappsupport@gmail.com</div>
+          </div>
+          <div class="contact-item">
+            <div class="label">Response Time</div>
+            <div class="value">Immediate / Within 24 hours</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Ongoing Review & Platform Governance</h2>
+      <p>
+        These standards are maintained and periodically reviewed by Shareef Technologies to adapt to emerging safety technologies, community feedback, and global child safety jurisprudence.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Gist by Shareef Technologies. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
